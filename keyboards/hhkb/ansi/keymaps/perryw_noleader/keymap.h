@@ -10,5 +10,7 @@ enum layout_names {
 
 enum tapdance_keycodes {
     TD_LGUI_MOUSE = 0,     // Tap dance key to switch to mouse layer _MOUSE
-    TD_RGUI_MOUSE
+    TD_RGUI_MOUSE,
+    TD_LALT_MOUSE,
+    TD_RALT_MOUSE
 };
