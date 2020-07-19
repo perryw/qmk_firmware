@@ -3,7 +3,9 @@
 //Associate our tap dance key with its functionality
 qk_tap_dance_action_t tap_dance_actions[] = {
     [TD_LGUI_MOUSE] = ACTION_TAP_DANCE_LAYER_TOGGLE(KC_LGUI, _MOUSE),
-    [TD_RGUI_MOUSE] = ACTION_TAP_DANCE_LAYER_TOGGLE(KC_RGUI, _MOUSE)
+    [TD_RGUI_MOUSE] = ACTION_TAP_DANCE_LAYER_TOGGLE(KC_RGUI, _MOUSE),
+    [TD_LALT_MOUSE] = ACTION_TAP_DANCE_LAYER_TOGGLE(KC_LALT, _MOUSE),
+    [TD_RALT_MOUSE] = ACTION_TAP_DANCE_LAYER_TOGGLE(KC_RALT, _MOUSE)
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -20,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      |-----------+-------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+------+----|
      TODO: Maybe add a photoshop layer for when I need to hold spacebar down. Maybe just make it a layer that you
                  |------+--------------------+-------------------+--------------------+------|
-                 | Dev  | TapTap(Gui, Mouse) | *** Space/DEV *** | TapTap(Gui, Mouse) | Dev  |
+                 | TapTap(Alt, Mouse)  | Gui | *** Space/DEV *** | TapTap(Gui, Mouse) | Dev  |
                  |------+--------------------+-------------------+--------------------+------|
     */
 
@@ -29,7 +31,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS,
         CTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, LT(_MEDIA, KC_SCLN), KC_QUOT, ALL_T(KC_ENT),
         KC_LSFT, CTL_T(KC_Z), ALT_T(KC_X), GUI_T(KC_C), KC_V, KC_B, KC_N, KC_M, GUI_T(KC_COMM), ALT_T(KC_DOT), CTL_T(KC_SLSH), KC_RSFT, MO(_NAV),
-        TG(_DEV), TD(TD_LGUI_MOUSE), LT(_DEV, KC_SPC), TD(TD_RGUI_MOUSE), TG(_DEV)),
+        // TG(_DEV), TD(TD_LGUI_MOUSE), LT(_DEV, KC_SPC), TD(TD_RGUI_MOUSE), TG(_DEV)),
+        TD(TD_LALT_MOUSE), KC_LGUI, LT(_DEV, KC_SPC), KC_RGUI, TD(TD_RALT_MOUSE)),
 
     /* Layer DEV: DEV mode (DEV Fn)
       TODO: Add a cmd/tab function to the developer layer for quick switching between different applications when debugging
