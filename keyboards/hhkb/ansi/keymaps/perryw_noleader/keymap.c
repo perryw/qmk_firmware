@@ -20,7 +20,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      |-----------+-------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+------+----|
      |   Shift   | Z/Ctl | X/Alt  | C/Gui |   V   |   B   |   N   |  M    | ,/Gui | ./Alt | //Ctl | Shift | NAV   |      |    |
      |-----------+-------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+------+----|
-     TODO: Maybe add a photoshop layer for when I need to hold spacebar down. Maybe just make it a layer that you
                  |------+--------------------+-------------------+--------------------+------|
                  | TapTap(Alt, Mouse)  | Gui | *** Space/DEV *** | TapTap(Gui, Mouse) | Dev  |
                  |------+--------------------+-------------------+--------------------+------|
@@ -31,7 +30,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS,
         CTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, LT(_MEDIA, KC_SCLN), KC_QUOT, ALL_T(KC_ENT),
         KC_LSFT, CTL_T(KC_Z), ALT_T(KC_X), GUI_T(KC_C), KC_V, KC_B, KC_N, KC_M, GUI_T(KC_COMM), ALT_T(KC_DOT), CTL_T(KC_SLSH), KC_RSFT, MO(_NAV),
-        // TG(_DEV), TD(TD_LGUI_MOUSE), LT(_DEV, KC_SPC), TD(TD_RGUI_MOUSE), TG(_DEV)),
         TD(TD_LALT_MOUSE), KC_LGUI, LT(_DEV, KC_SPC), KC_RGUI, TD(TD_RALT_MOUSE)),
 
     /* Layer DEV: DEV mode (DEV Fn)
@@ -43,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       |------+-----+-----+-----+----+----+--------+----------------+--------------+-----------+-------------+-----+-------+-------+-----|
       |      | F1  | F2  | F3  | F4 | F5 | Left   |  Down          | Up           | Right     |             |     |       |       |     |
       |------+-----+-----+-----+----+----+--------+----------------+--------------+-----------+-------------+-----+-------+-------+-----|
-      |      |     |     |     |    |    |        |                |              |           |             |     | NAV   |       |     |
+      |      |     |     |     |    | SPC|        |                |              |           |             |     | NAV   |       |     |
       |------+-----+-----+-----+----+----+--------+----------------+--------------+-----------+-------------+-----+-------+-------+-----|
 
                  |------+------+----------------------+------+------+
@@ -55,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_DELETE, KC_DELETE,
         KC_CAPSLOCK, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_NAV),
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_SPC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_NAV),
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
     /* Layer MOUSE: MOUSE mode (MOUSE Fn)
@@ -109,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       |------+-----+-----+-----+----+----+----+----------------+--------------+-----------+-------------+-----+-------+-------+-----|
       |      |     |     |     |    |    |    |                |              |           |             |     |       |  DEL  | DEL |
       |------+-----+-----+-----+----+----+----+----------------+--------------+-----------+-------------+-----+-------+-------+-----|
-      | CAPS |     |     |    |    |    |                |              |           |             | UP  |       |       |     |
+      | CAPS |     |     |     |    |    |    |                |              |           |             | UP  |       |       |     |
       |------+-----+-----+-----+----+----+----+----------------+--------------+-----------+-------------+-----+-------+-------+-----|
       |      |     |     |     |    |    |    |                |              |    HOME   |    PgUP     | LFT |  RT   |       |     |
       |------+-----+-----+-----+----+----+----+----------------+--------------+-----------+-------------+-----+-------+-------+-----|
