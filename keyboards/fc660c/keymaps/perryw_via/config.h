@@ -11,4 +11,7 @@
 // you hold it, and when this option isn't enabled, z rapidly followed by x actually sends Ctrl-x. That's bad.)
 #define IGNORE_MOD_TAP_INTERRUPT
 
+// repurpose caps lock LED for layer indicator
+#undef LED_CAPS_LOCK_PIN
+
 #endif
