@@ -44,3 +44,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,                _______,                _______,_______,_______,     _______,_______,_______
     )
 };
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    // set caps lock LED based on layer state
+    if (IS_LAYER_ON_STATE(state, 1)) {
+        writePin(B6, LED_PIN_ON_STATE);
+    } else {
+        writePin(B6, !LED_PIN_ON_STATE);
+    }
+
+    return state;
+}
