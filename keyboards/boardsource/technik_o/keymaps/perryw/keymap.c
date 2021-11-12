@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, KC_BSPC,
     KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,    KC_PLUS,    KC_LCBR, KC_RCBR, KC_PIPE,
     _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
-    RESET,   _______, _______, _______, _______, _______, _______, _______,    KC_MNXT,    KC_VOLD, KC_VOLU, KC_MPLY
+    RESET,   RGB_VAD, RGB_VAI, _______, _______, _______, _______, _______,    KC_MNXT,    KC_VOLD, KC_VOLU, KC_MPLY
   ),
 
   [_LOWER] = LAYOUT_ortho_4x12(
@@ -70,33 +70,59 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             // rgb_matrix_set_color_all(12, 219, 132);
             rgb_matrix_set_color_all(0, 0, 0);
 
-            // top-left
-            rgb_matrix_set_color(10, 12, 219, 132);
+            // 1
+            rgb_matrix_set_color(11, 25, 11, 71);
+
+            // 5
+            rgb_matrix_set_color(15, 25, 11, 71);
+
+            // 0
+            rgb_matrix_set_color(20, 25, 11, 71);
 
             // J
-            rgb_matrix_set_color(29, 12, 219, 132);
+            rgb_matrix_set_color(29, 25, 11, 71);
 
             // bottom-right
-            rgb_matrix_set_color(57, 12, 219, 132);
+            rgb_matrix_set_color(57, 25, 11, 71);
             break;
         case 2: // LOWER layer
-            rgb_matrix_set_color_all(79, 127, 3);
+            // rgb_matrix_set_color_all(79, 127, 3);
+            rgb_matrix_set_color_all(0, 0, 0);
+
+            // 1
+            rgb_matrix_set_color(11, 38, 53, 16);
+
+            // 5
+            rgb_matrix_set_color(15, 38, 53, 16);
+
+            // 0
+            rgb_matrix_set_color(20, 38, 53, 16);
 
             // J
-            rgb_matrix_set_color(29, 12, 219, 132);
+            rgb_matrix_set_color(29, 38, 53, 16);
 
             break;
         case 3: // SPACE layer
-            rgb_matrix_set_color_all(215, 46, 255);
+            // rgb_matrix_set_color_all(215, 46, 255);
+            rgb_matrix_set_color_all(0, 0, 0);
+
+            // 1
+            rgb_matrix_set_color(11, 4, 80, 48);
+
+            // 5
+            rgb_matrix_set_color(15, 4, 80, 48);
+
+            // 0
+            rgb_matrix_set_color(20, 4, 80, 48);
 
             // H
-            rgb_matrix_set_color(28, 12, 219, 132);
+            rgb_matrix_set_color(28, 4, 80, 48);
             // J
-            rgb_matrix_set_color(29, 12, 219, 132);
+            rgb_matrix_set_color(29, 4, 80, 48);
             // K
-            rgb_matrix_set_color(30, 12, 219, 132);
+            rgb_matrix_set_color(30, 4, 80, 48);
             // L
-            rgb_matrix_set_color(31, 12, 219, 132);
+            rgb_matrix_set_color(31, 4, 80, 48);
 
             break;
         default:
